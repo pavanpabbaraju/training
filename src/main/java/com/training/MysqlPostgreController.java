@@ -23,7 +23,7 @@ public class MysqlPostgreController {
 
     @RequestMapping("/foobar/{employeeId}")
     public String fooBar(@PathVariable("employeeId") Long employeeId){
-        Employee mEmployee = mysqlRepo.findByEmployeeId(employeeId) ;
+        Employee mEmployee = mysqlRepo.findByEmployeeId(employeeId);
         com.training.postgre.domain.Employee pEmployee = postgreRepo.findByEmployeeId(employeeId) ;
 
         return mEmployee+ " " + pEmployee ;
