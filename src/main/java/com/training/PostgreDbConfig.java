@@ -22,7 +22,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 public class PostgreDbConfig {
 
-    @Bean(name = "postgreDataSource")
+  @Bean(name = "postgreDataSource")
   @ConfigurationProperties(prefix = "postgre.datasource")
   public DataSource dataSource() {
     return DataSourceBuilder.create().build();
